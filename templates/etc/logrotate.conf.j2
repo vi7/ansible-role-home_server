@@ -1,0 +1,7 @@
+#jinja2: lstrip_blocks: True
+{{ ansible_managed | comment }}
+
+/var/log/{{ ansible_host }}/*.log {
+  missingok
+  notifempty
+}
